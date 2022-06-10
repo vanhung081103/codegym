@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form actuon="">
+        <legend>
+           <b>Họ và Tên</b> <br>
+           <input type="text" name="Ten">
+        </legend>
+        <legend>
+            <b>Email</b> <br>
+            <input type="email" name="email">
+         </legend>
+         <legend>
+            <b>Số điện thoại</b> <br>
+            <input type="number">
+        </legend>
+        <legend>
+            <b>Giới tính</b> <br>
+            <input type="radio" name="gender"><span>Nam</span> <br>
+            <input type="radio" name="gender"><span>Nữ</span>
+        </legend>
+        <legend>
+            <b>Giới tính</b> <br>
+            <input type="radio" name="married_status"><span>Độc thân</span> <br>
+            <input type="radio" name="married_status"><span>Đã kết hôn</span>
+        </legend>
+        <legend>
+        <b>Sở thích</b> <br>
+            <input type="checkbox" name="favorite"><span>Yêu pé</span> <br>
+            <input type="checkbox" name="favorite"><span>xem phim </span> <br>
+            <input type="checkbox" name="favorite"><span>game</span> 
+        </legend>
+        <b>Sở đoản</b> <br>
+            <input type="checkbox" name="Un_favorite"><span>lười</span> <br>
+            <input type="checkbox" name="Un_favorite"><span>hướng nội</span> <br>
+            <input type="checkbox" name="Un_favorite"><span>nhạy cảm</span> 
+        </legend>
+        <legend>
+            <b>Giới tính</b> <br>
+            <select name="" id="gender">
+                <option value="1">Nam</option>
+                <option value="2">Nữ</option>
+                <option value="3">khác</option>
+            </select>
+        </legend>
+        <legend>
+            <b>Miêu tả bồ của em</b> <br>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </legend>
+        <legend>
+            <input type="button" value="A">
+            <input type="submit" value="B">
+            <button type="submit">Nhap</button>
+        </legend>
+    </form>
+</body>
+</html>
+<script>
+     function check() {
+        let iput1 = document.getElementById("gender").value;
+        document.write(input1);
+     }
+</script>
