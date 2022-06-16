@@ -10,9 +10,14 @@
     
 </body>
 </html>
+
 <script>
-    let number1 = prompt("Moi ban nhap so thu nhat");
-    let number2 = prompt("Moi ban nhap so thu hai");
-    let Sum = number1 + number2;
-    document.write(Sum);
+    // demo++: Cộng trước rồi mới tăng kết quả
+    // ++demo : tăng kết quả trước rồi mới cộng 
+    let demo = 0;
+    let Ressult = 5 + demo++; // 5 + 0
+    // let Ressult = 5 + ++demo; // 5 + 1
+    document.write(demo + "<br>" + Ressult)
+
+    
 </script>
