@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+
+function speed(num){
+	var num_sp = parseFloat( 1 / num );
+	$(".rotating").css({
+		"animation" : "rotating "+num_sp+"s linear infinite"
+	});
+}
+function stop(){
+	var end = 1;
+	var inter = setInterval(function(){
+		if( end == 5 ){
+			clearInterval(inter);
+			$(".rotating").css({
+				"animation" : "5s linear 0s infinite normal none"
+			});
+		}else{
+			end++;
+			$(".rotating").css({
+				"animation" : "rotating "+end+"s linear infinite"
+			});
+		}
+	},1000);
+}
+</script>
+</head>
+<body>
+<div style="text-align: center;" >
+	<img class="rotating" style="width: 100px; height: 100px; line-height: 100px;"  src="quat.png">
+	<br>
+	<div style="margin-top:15px;">
+		<button onclick="stop();">Stop</button>
+		<button onclick="speed(1);">1</button>
+		<button onclick="speed(2);">2</button>
+		<button onclick="speed(3);">3</button>
+	</div>
+</div>
+
+</body>
+</html>
