@@ -68,7 +68,7 @@ let img = document.querySelector('#tank');
         }
 
         if(isExplosion == true) {
-            boom.setAttribute("src", "explosion.png")
+            boom.setAttribute("src", "boom.png")
             setTimeout(function() {
                 random();
             },1000)
