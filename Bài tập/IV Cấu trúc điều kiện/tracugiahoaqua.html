@@ -7,8 +7,40 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Giá hoa quả</h2>
-    <input type="name" id="fruit" name="" >
-    
+<p>Giá hoa quả</p>
+<input type="text" id="giahoaqua" >
+<button onclick="giahoaqua">xem giá</button>
+<p id="giaca">mệnh giá</p>
 </body>
 </html>
+<script>
+    let gia = "";
+    function giahoaqua() {
+    let hoaqua = document.getElementById("giahoaqua").value;
+    
+    switch ( {
+        case "Ổi":
+            gia = "20000 VND/kg"
+            break;
+        case "Dưa Hấu":
+            gia = "20000 VND/kg"
+            break;
+        case "Táo":
+            gia = "30000 VND/kg"
+            break;
+        case "Xoài":
+            gia = "30000 VND/kg"
+            break;
+        case "Cam":
+            gia = "40000 VND/kg"
+            break;
+        case "Chôm Chôm":
+            gia = "40000 VND/kg"
+            break;
+        case "Măng Cụt":
+            gia = "50000 VND/kg"
+            break;
+        
+     }
+    }
+</script>
