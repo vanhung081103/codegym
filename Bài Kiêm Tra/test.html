@@ -1,65 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài kiểm tra</title>
-</head>
+    <button onclick="reset()">nhập lại</button>
 
-<body>
-    <input type="password" name="" id="check_pass">
-    <button onclick="login()" id="btn_login">Đăng nhập</button>
-    <button onclick="reset()">Reset</button>
-    <p id="result"></p>
-
-    <script>
-        var count_wrong = 1;
-
-        function login() {
-            let input_pass = document.getElementById("check_pass").value;
-
-            if (input_pass == '12345') {
-                document.getElementById("result").innerHTML = "Đăng nhập thành công";
-                count_wrong = 1;
-            } else {
-                document.getElementById("result").innerHTML = "Nhập sai pass lần " + count_wrong;
-
-                if (count_wrong == 5) {
-                    document.getElementById("check_pass").disabled = true;
-                    document.getElementById("btn_login").disabled = true;
-                }
-                count_wrong++;
-            }
-
-        }
-
-        function reset(){
-            count_wrong = 1;
-            document.getElementById("check_pass").value = '';
-            document.getElementById("check_pass").disabled = false;
-            document.getElementById("btn_login").disabled = false;
-        }
-
-
-
-
-
-
-        // let input_pass = prompt("Nhập pass");
-        // let count_wrong = 1;
-        // while (input_pass != '12345') {
-        //     input_pass = prompt("Nhập pass");
-        //     count_wrong++;
-        //     if (count_wrong == 5) {
-        //         alert("Nhập sai password quá 5 lần");
-        //         break;
-        //     }
-        // }
-
-
-    </script>
-</body>
-
-</html>
+function reset() {
+    i=1;
+    document.getElementById("pass").value= '';
+    document.getElementById("pass").value= false;
+    document.getElementById("login").value = false
+  }

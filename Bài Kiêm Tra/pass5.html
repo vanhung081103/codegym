@@ -9,7 +9,7 @@
 <body>
     <input type="password" id="pass"> <br>
     <button type="button" onclick="check()" id="login" > đăng nhập </button>
-    <button onclick="reset()">nhập lại</button>
+
     <p id="result"></p>
     
 </body>
@@ -31,10 +31,5 @@ let input = document.getElementById("result").innerHTML = "Bạn đã nhập đ�
     i++;
    }
 }
-  function reset() {
-    i=1;
-    document.getElementById("pass").value= '';
-    document.getElementById("pass").value= false;
-    document.getElementById("login").value = false
-  }
+
 </script>
