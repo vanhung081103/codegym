@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+    <h1><b>Tính điểm Đại Học khối D </b></h1>
+    <form action="">
     <table>
        <tr>
         <td> Môn toán</td>
@@ -23,50 +24,50 @@
        <tr>
         <td> Khu vực </td>
         <td>
-        <select name="gender" id="gender">
-            <option value="1" id="1">KV1</option>
-            <option value="2" id="2">KV2</option>
-            <option value="3" id="2a">KV2-NT</option>
-            <option value="4" id="3">KV3</option> </br>
+        <select name="khu vuc" id="place">
+            <option value="1" >KV1</option>
+            <option value="2" >KV2</option>
+            <option value="2NT" >KV2-NT</option>
+            <option value="3" >KV3</option> </br>
         </select>
         </td>
        </tr>
-       <tr>
-       <td> <button onclick="Tính điểm" id="tinhdiem">Tính điểm</button> </td>
-       </tr>
+       
     </table>   
+</form>
+<br>
+    <button type="button" onclick="tinhdiemkhoiD();" >Tính điểm</button> 
+<br>
+<br>
+<p id="result" >Tổng điểm ĐH khối D của bạn là : </p>
+
 </body>
 </html>
 <script>
     function  tinhdiemkhoiD() {
 
-    var MA=document.getElementById("Math");
-    var LI=document.getElementById("Literature");
-    var EN=document.getElementById("English");
-
-    var KV=document.getElementById("gender");
-
-    var KV1=document.getElementById("1");
-    var KV2=document.getElementById("2");
-    var KV2A=document.getElementById("2a");
-    var KV3=document.getElementById("3");
-    
-    var diemso = document.getElementById("tinhdiem");
-    switch (diemso) 
+    var MA= +document.getElementById("Math").value;
+    var LI= +document.getElementById("Literature").value;
+    var EN= +document.getElementById("English").value;
+    var KV=document.getElementById("place").value;
+    let area;   
+    switch (KV) 
     {
-        case KV1:
-             alert("Tổng điểm ĐH khối D của bạn là: "(MA + LI + EN + 0.75));
+        case "1":
+             area = 0.75;
             break;
-        case KV2:
-             alert("Tổng điểm ĐH khối D của bạn là: "+(MA + LI + EN + 0.5));
+        case "2":
+             area = 0.5;
             break;
-        case KV2A:
-             alert("Tổng điểm ĐH khối D của bạn là: "+(MA + LI + EN + 0.25));
+        case "2NT":
+             area = 0.25;
             break;
-        case KV3:
-             alert("Tổng điểm ĐH khối D của bạn là: "+(MA + LI + EN + 0));
+        case "3":
+             area = 0;
             break;
 
     }
+    let sum = MA + LI + EN + area;
+    document.getElementById("result").innerHTML = "Tổng điểm ĐH khối D của bạn là : " + + sum;
     }
 </script>
