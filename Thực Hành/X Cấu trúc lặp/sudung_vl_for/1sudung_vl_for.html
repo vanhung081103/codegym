@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript</h2>
+    <p id="demo"></p>
+</body>
+</html>
+<script>
+    // Phân tích 3 phần trong vòng lặp for
+
+    // Khởi tạo: i = 0
+
+    // Điều kiện: i < 5
+
+    // Lệnh lặp lại: i = i + 1
+    let text = "";
+    // Viết mã vòng lặp for
+    //Lưu ý: i có thể được khởi tạo tại thời điểm khai báo, 
+    //hoặc trong phần thân của vòng lặp.
+    let i;
+    for (i = 0; i < 5; i++) {
+       text += "The number is " + i + "<br>"; 
+    }
+    document.getElementById("demo").innerHTML = text;
+    //Thực thi chương trình, quan sát kết quả.
+</script>
