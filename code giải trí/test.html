@@ -10,9 +10,9 @@
     <form>
         <table>
         <tr> <th> <label>Nhập số cân nặng của bạn :</label>
-        <input type="number" id="wei" ><label for="secondLabel">kilogrammes</label> </th> </tr>  
-        <tr> <th> <label>Nhập chiều cao của bạn :</label> 
-        <input type="number" id="hei" ><label for="secondLabel">meter</label> </th> </tr>  <br>
+        <input type="number" id="wei" onclick="weight()"><label for="secondLabel">kilogrammes</label> </th> </tr>  
+        <tr><th> <label>Nhập chiều cao của bạn :</label> 
+        <input type="number" id="hei" onclick="height()"><label for="secondLabel">centimetres</label> </th> </tr>  <br>
     </table>
     </form>
        <button type="button" onclick="prompt()">Tính</button> <br>
@@ -25,31 +25,31 @@
     var WEI =  +document.getElementById("wei").value;
     var HEI =  +document.getElementById("hei").value;
     var BMI = (WEI/(HEI*HEI));
-    if ( BMI < 16) {
+    if (BMI < 16) {
     document.getElementById("result").innerHTML = "Gầy độ III";
-    
-    } else if (BMI >= 16 && BMI < 17 ) {
+    return;
+    } else if (BMI >= 16 && BMI < 17) {
     document.getElementById("result").innerHTML = "Gầy độ II";
-    
+    return;
     } else if (BMI >= 17 && BMI < 18.5) {
     document.getElementById("result").innerHTML = "Gầy độ I";
-    
+    return;
     } else if (BMI >= 18.5 && BMI > 25) {
     document.getElementById("result").innerHTML = "Bình thường";
-    
-    } else if (BMI >= 25 && BMI > 30 ) {
+    return;
+    } else if (BMI >= 25 && BMI > 30) {
     document.getElementById("result").innerHTML = "Thừa cân";
-    
-    } else if (BMI >= 30 && BMI < 35 ) {
+    return;
+    } else if (BMI >= 30 && BMI < 35) {
     document.getElementById("result").innerHTML = "Béo phì độ I";
-    
-    } else if (BMI >= 35 && BMI < 40 ) {
+    return;
+    } else if (BMI >= 35 BMI < 40 ) {
     document.getElementById("result").innerHTML = "Béo phì độ II";
-    
-    } else if (BMI > 40 ) {
-    document.getElementById("result").innerHTML = "Béo phì độ II";
+    return;
+    } else if (BMI > 40) {
+    document.getElementById("result").innerHTML = "Béo phì độ III";
+    return;
     }
-  }
-  // xem lại , lỗi  
-
+  } 
+    // lỗi ko chọn lọc được 
 </script>
