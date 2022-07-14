@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>BMI calculator</h1>
+<form id="calc">
+	<div class="firstLabel">
+	<label>Your height: </label>
+		<input class = "values" type="text"  id="num1" required><label class="secondLabel">centimetres</label>
+	</div>
+		<br>
+	<div>
+		<label>Your weight:</label>
+		<input class = "values" type="text" id="num2" required ><label class="secondLabel">kilogrammes</label>
+	</div>
+		<br>
+	<div id="gender">
+	<input  name="gender" type="radio" value="0" checked>	
+	<label>Female</label>
+	<input name="gender" type="radio" value="1">
+	<label>Male</label>
+	</div>
+    <br>
+	<button id="btn" type="submit" class="btn btn-primary" >Calculate</button>
+	<div>
+		<h4>Your BMI:</h4>
+		<p id="result"></p>
+	</div>
+	<br>
+	<p id="message"></p>
+	</form>
+</body>
+</html>
+<script>
+    document.getElementById("calc").addEventListener("submit", calculate); 	
+	
+    function calculate(e){
+    var radios = document.getElementsByName('gender');
+    var height = Number(document.getElementById("num1").value);
+    var weight = Number(document.getElementById("num2").value);
+    var height2 = height * height;
+    var bmi = (weight / height2)*10000;	
+            e.preventDefault();
+            document.getElementById("result").innerHTML = bmi.toFixed(2);
+        for (var i = 0, length = radios.length; i < length; i++)
+    {
+     if (radios[i].checked)
+     {
+        break;
+     }
+    }
+    if (radios[i].value == 0){
+          
+      if(bmi <= 18.5) {
+            document.getElementById("message").innerHTML = "Underweight!";
+         return;
+        }
+            else if (bmi <= 24.9) {
+            document.getElementById("message").innerHTML = "Normal weight!";
+        return;
+        }
+        
+      else if (bmi <= 27.3) {
+            document.getElementById("message").innerHTML = "Slightly overweight!";
+        return;
+        }
+        
+      else if (bmi <= 32.3) {
+            document.getElementById("message").innerHTML = "Overweight!";
+        return;
+        }
+        
+      else if (bmi <= 45.0) {
+            document.getElementById("message").innerHTML = "Obese!";
+        return;
+        }
+        
+      else if (bmi => 45.1) {
+            document.getElementById("message").innerHTML = "Extremely obese!";
+        return;
+        } 
+      }
+        else{
+                if (bmi <= 20.5) {
+            document.getElementById("message").innerHTML = "Underweight!";
+         return;
+        }
+       else if (bmi <= 25.9) {
+            document.getElementById("message").innerHTML = "Normal weight!";
+        return;
+        }
+        
+       else if (bmi <= 29.3) {
+            document.getElementById("message").innerHTML = "Slightly overweight!";
+        return;
+        }
+        
+       else if (bmi <= 34.3) {
+            document.getElementById("message").innerHTML = "Overweight!";
+        return;
+        }
+        
+      else if (bmi <= 45.0) {
+            document.getElementById("message").innerHTML = "Obese!";
+        return;
+        }
+        
+      else if (bmi => 45.1) {
+            document.getElementById("message").innerHTML = "Extremely obese!";
+        return;
+        } 		
+     }
+    }
+</script>
