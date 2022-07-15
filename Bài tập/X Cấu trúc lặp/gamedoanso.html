@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="begin()" > Chơi </button> <br>
+
+    <p id="result" ></p>
+    
+
+
+</body>
+</html>
+<script>
+    function begin() {
+    let rand =Math.round(Math.random() * 100)
+    let guessNum 
+
+    do{
+        guessNum = Number(prompt('Nhập số dự đoán: '))
+
+        if(guessNum == rand){
+            document.getElementById("result").innerHTML = "Bạn đã đoán trúng"
+        }else if(guessNum < rand){
+            alert('Số dự đoán nhỏ hơn số bí mật')
+        }else{
+            alert('Số dự đoán lớn hơn số bí mật')
+        }
+
+    }while(rand != guessNum)
+}; 
+</script>
